@@ -51,5 +51,5 @@ main = do
     (handle, _) <- http_resp_new
     http_resp_header_insert handle "Content-Type" "text/plain" >>= print
     (body, _) <- http_body_new
-    http_body_write body "Hello World!" >>= print
+    http_body_write body "Hello World, this is Haskell as WebAssembly on Fastly!" >>= print
     http_resp_send_downstream handle body 0 >>= print

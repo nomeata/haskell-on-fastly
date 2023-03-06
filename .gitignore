@@ -23,3 +23,5 @@ cabal.project.local~
 .ghc.environment.*
 .direnv
 hello.wasm
+bin
+pkg

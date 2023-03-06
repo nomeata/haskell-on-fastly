@@ -1,0 +1,12 @@
+# This file describes a Fastly Compute@Edge package. To learn more visit:
+# https://developer.fastly.com/reference/fastly-toml/
+
+authors = ["mail@joachim-breitner.de"]
+description = "Haskell on Fastly demo"
+language = "other"
+manifest_version = 2
+name = "haskell-on-fastly"
+service_id = "8cUOkfuCfs4KX3YpAf0RE0"
+
+[scripts]
+  build = "wasm32-wasi-ghc --make fastly-sys.c hello.hs -o bin/main.wasm"
