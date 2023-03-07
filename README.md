@@ -11,7 +11,7 @@ Moving parts
 
  * Haskell's GHC compiler supports compiling to WebAssembly since GHC-9.8.
    This repo is using <https://gitlab.haskell.org/ghc/ghc-wasm-meta> to get a
-   precompiled compiler for that target (see <./flake.nix>)
+   precompiled compiler for that target (see [`flake.nix`](flake.nix))
 
  * The generated code uses the WASI system interface (<https://wasi.dev/>) for
    generic stuff (accessing environment variables). Luckily, Fastly's
@@ -28,11 +28,16 @@ Moving parts
    - The host-side implementation in Viceroy, the local development environment:
      <https://github.com/fastly/Viceroy/tree/05247c4addbd94b04636ff89c0a89fbaf672b2e9/lib/src/wiggle_abi>
 
-   We bind a few of function via Haskell's FFI in file <./Fastly.hs>. Because
-   Haskell's WebAssembly FFI currently does not support importing functions
-   from a different WebAssembly module than `env`, file <./fastly-sys.c>
-   imports them from the right module and wraps them in a “local” C function
-   that we can import from Haskell
+   We bind a few of function via Haskell's FFI in file
+   [`Fastly.hs`](Fastly.hs). Because Haskell's WebAssembly FFI currently does
+   not support importing functions from a different WebAssembly module than
+   `env`, file [`fastly-sys.c`](./fastly-sys.c) imports them from the right
+   module and wraps them in a “local” C function that we can import from
+   Haskell.
+
+ * The [`hello.hs`](hello.hs) file puts it all together and implements a very
+   simple service that just prints URL and the environment.
+
 
 How to build, test and deploy
 -----------------------------
