@@ -65,13 +65,13 @@
         "type": "github"
       }
     },
-    "nixpkgs-unstable": {
+    "nixpkgs_2": {
       "locked": {
-        "lastModified": 1678137439,
-        "narHash": "sha256-paHsweIPm416wd6zedga133UTw71PzncJeRREcwQz9o=",
+        "lastModified": 1678403296,
+        "narHash": "sha256-JjvyoZgBKjHhRNV36zU/KoJJIXYLIeGwvfW4484nhyc=",
         "owner": "NixOS",
         "repo": "nixpkgs",
-        "rev": "f06733c932d2264ebd9441d6436e299ba456ac1f",
+        "rev": "ca09312f31444bbcea249a7a2230036a39325acb",
         "type": "github"
       },
       "original": {
@@ -81,28 +81,11 @@
         "type": "github"
       }
     },
-    "nixpkgs_2": {
-      "locked": {
-        "lastModified": 1678072060,
-        "narHash": "sha256-6a9Tbjhir5HxDx4uw0u6Z+LHUfYf7tsT9QxF9FN/32w=",
-        "owner": "NixOS",
-        "repo": "nixpkgs",
-        "rev": "47c003416297e4d59a5e3e7a8b15cdbdf5110560",
-        "type": "github"
-      },
-      "original": {
-        "owner": "NixOS",
-        "ref": "nixos-22.11",
-        "repo": "nixpkgs",
-        "type": "github"
-      }
-    },
     "root": {
       "inputs": {
         "flake-utils": "flake-utils",
         "ghc-wasm-meta": "ghc-wasm-meta",
-        "nixpkgs": "nixpkgs_2",
-        "nixpkgs-unstable": "nixpkgs-unstable"
+        "nixpkgs": "nixpkgs_2"
       }
     }
   },
